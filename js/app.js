@@ -22,6 +22,16 @@ function setBg() {
   }
 
   //------------------------------------------------------------------------------
+const photoNumber = 12;
+const photoContainer = document.querySelector('.photo-container')
+for (let i = 0; i < photoNumber; i++){
+    let img = document.createElement('img');
+    img.src=`photo/${i}.jpeg`;
+    photoContainer.appendChild(img);
+    img.addEventListener('dblclick', (e)=>{
+        img.src=`photo/20.png`;
+    })
+}
 
 const hide = document.querySelector('.show');
 hide.addEventListener('click', (e)=>{
@@ -44,3 +54,4 @@ shuffle.addEventListener('click', (e)=>{
         container.appendChild(container.children[Math.random() * i | 0]);
     }
 })
+
