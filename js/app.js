@@ -20,3 +20,27 @@ function setBg() {
     return "#" + randomColor;
     
   }
+
+  //------------------------------------------------------------------------------
+
+const hide = document.querySelector('.show');
+hide.addEventListener('click', (e)=>{
+    e.preventDefault();
+    let photoContainer = document.querySelector(".photo-container");
+    if (photoContainer.style.display === "none") {
+        photoContainer.style.display = "block";
+        console.log("rodyti");
+    } else {
+        photoContainer.style.display = "none";
+        console.log("slepti");
+    }
+})
+
+const shuffle = document.querySelector(".shuffle");
+shuffle.addEventListener('click', (e)=>{
+    e.preventDefault();
+    let container = document.querySelector('.photo-container');
+    for (let i = container.children.length; i >= 0; i--) {
+        container.appendChild(container.children[Math.random() * i | 0]);
+    }
+})
