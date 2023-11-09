@@ -34,7 +34,7 @@ hide.addEventListener('click', (e)=>{
         img.addEventListener('dblclick', (e)=>{
             img.src=`photo/20.png`;
         })
-    }
+    }hide.style.display='none';
 })
 
 
